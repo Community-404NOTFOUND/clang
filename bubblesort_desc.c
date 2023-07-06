@@ -1,12 +1,12 @@
-// write a program to enter n number in array. Redisplay the array with elements being sorted in ascending order
+// write a program to enter n number in array. Redisplay the array with elements being sorted in descending order
 
 #include <stdio.h>
 #include <conio.h>
 
 int main()
 {
-    int i, n, j, temp, arr[10];
-    printf("Enter the number of elements in the array : ");
+    int i, j, n, temp, arr[10];
+    printf("Enter the number of elements you want to enter : ");
     scanf("%d", &n);
     for (i = 0; i < n; i++)
     {
@@ -17,7 +17,7 @@ int main()
     {
         for (j = 0; j < n - i - 1; j++)
         {
-            if (arr[j] > arr[j + 1])
+            if (arr[j] < arr[j + 1])
             {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -25,12 +25,9 @@ int main()
             }
         }
     }
-    printf("The sorted array in ascending order : ");
+    printf("The sorted array has been : ");
     for (i = 0; i < n; i++)
     {
-        printf("\n Arr[%d] = %d",i,arr[i]);
+        printf("\n Arr[%d] = %d", i, arr[i]);
     }
-    return 0;
 }
-
-
